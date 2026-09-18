@@ -273,3 +273,12 @@ body {
   .hero::after { right: -18rem; }
   .hero-facts { line-height: 1.3; }
 }
+
+
+/* Mobile polish */
+body { overflow-x: hidden; }
+@media (max-width: 800px) {
+  .nav { -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: 3px; }
+  .nav::-webkit-scrollbar { height: 3px; }
+  .nav::-webkit-scrollbar-thumb { background: rgba(32, 217, 244, .45); }
+}
