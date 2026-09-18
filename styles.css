@@ -308,3 +308,74 @@ body { overflow-x: hidden; }
   .brand { min-width: 150px; }
   .brand img { width: 138px; }
 }
+
+
+/* Core Review test-version callout */
+.hero-core-card {
+  position: absolute;
+  z-index: 1;
+  top: 8.5rem;
+  right: 0;
+  width: min(310px, 28%);
+  min-height: 300px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: .85rem;
+  border: 1px solid rgba(32, 217, 244, .55);
+  background:
+    linear-gradient(145deg, rgba(13, 49, 92, .96), rgba(2, 9, 22, .94)),
+    radial-gradient(circle at 85% 15%, rgba(32, 217, 244, .22), transparent 12rem);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .25);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.hero-core-card::before {
+  content: "CORE";
+  position: absolute;
+  top: .65rem;
+  right: .9rem;
+  color: rgba(32, 217, 244, .18);
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.hero-core-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+}
+.hero-core-card__eyebrow,
+.hero-core-card__link {
+  color: var(--cyan);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.hero-core-card strong {
+  max-width: 220px;
+  color: var(--text);
+  font-size: 1.45rem;
+  line-height: 1.08;
+}
+.hero-core-card__copy {
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.5;
+}
+.hero-core-card__link {
+  color: var(--cyan-soft);
+}
+@media (max-width: 1000px) {
+  .hero-core-card { width: min(310px, 30%); }
+}
+@media (max-width: 800px) {
+  .hero-core-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    min-height: 0;
+    margin-top: 2rem;
+  }
+}
